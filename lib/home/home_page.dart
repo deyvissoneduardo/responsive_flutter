@@ -3,9 +3,9 @@ import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:responsive/config/constantes.dart';
+import 'package:responsive/home/sections/AdvantageSection.dart';
+import 'package:responsive/home/sections/TopSection.dart';
 import 'package:responsive/widgets/SizedBox.dart';
-
-import 'TopSection/TopSection.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
               /** limita tamaho */
               constraints: BoxConstraints(maxWidth: 1200),
               child: ListView(
-                children: [TopSection()],
+                children: [TopSection(), AdvantageSection()],
               )),
         ),
       );
