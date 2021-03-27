@@ -25,7 +25,9 @@ class HomePage extends StatelessWidget {
           child: ConstrainedBox(
               /** limita tamaho */
               constraints: BoxConstraints(maxWidth: 1200),
-              child: Container()),
+              child: ListView(
+                children: [TopSection()],
+              )),
         ),
       );
     });
