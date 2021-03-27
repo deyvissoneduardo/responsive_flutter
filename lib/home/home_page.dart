@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive/config/constantes.dart';
 import 'package:responsive/widgets/SizedBox.dart';
 
+import 'TopSection/TopSection.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,15 +23,15 @@ class HomePage extends StatelessWidget {
         body: Align(
           alignment: Alignment.center,
           child: ConstrainedBox(
-            /** limita tamaho */
-            constraints: BoxConstraints(maxHeight: 1400),
-            child: ListView(),
-          ),
+              /** limita tamaho */
+              constraints: BoxConstraints(maxWidth: 1200),
+              child: Container()),
         ),
       );
     });
   }
 
+// Widgets de AppBar
   Widget _imageLogo() {
     return Center(
       child: Row(
@@ -168,4 +170,6 @@ class HomePage extends StatelessWidget {
       ],
     );
   }
+
+  // Widget body
 }
