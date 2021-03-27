@@ -3,6 +3,8 @@ import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:responsive/config/constantes.dart';
+import 'package:responsive/home/sections/AdvantageSection.dart';
+import 'package:responsive/home/sections/TopSection.dart';
 import 'package:responsive/widgets/SizedBox.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,13 +17,24 @@ class HomePage extends StatelessWidget {
       // print('altura max: ${constraints.maxHeight}');
       // print('altura min: ${constraints.minHeight}');
       return Scaffold(
+        backgroundColor: Colors.black,
         appBar:
             constraints.maxWidth < mobileApp ? _appBarMobile() : _appBarWeb(),
         drawer: constraints.maxWidth < 800 ? Drawer() : null,
+        body: Align(
+          alignment: Alignment.center,
+          child: ConstrainedBox(
+              /** limita tamaho */
+              constraints: BoxConstraints(maxWidth: 1200),
+              child: ListView(
+                children: [TopSection(), AdvantageSection()],
+              )),
+        ),
       );
     });
   }
 
+// Widgets de AppBar
   Widget _imageLogo() {
     return Center(
       child: Row(
