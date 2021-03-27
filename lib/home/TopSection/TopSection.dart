@@ -112,7 +112,44 @@ class TopSection extends StatelessWidget {
           ),
         );
       }
-      return Container();
+      // modo mobile
+      return Column(
+        children: [
+          AspectRatio(
+            aspectRatio: 3.4,
+            child: Image.asset(
+              'assets/logo.jpg',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Aprenda Flutter com este curso',
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  'Bora Aprender Flutter com o Professor Eduardo! Cursos por apenas R\$22.90, Qualidade Garantida',
+                  style: TextStyle(fontSize: 15, color: Colors.white),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                CustonSearchField()
+              ],
+            ),
+          )
+        ],
+      );
     });
   }
 }

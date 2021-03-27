@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
       // print('altura max: ${constraints.maxHeight}');
       // print('altura min: ${constraints.minHeight}');
       return Scaffold(
+        backgroundColor: Colors.black,
         appBar:
             constraints.maxWidth < mobileApp ? _appBarMobile() : _appBarWeb(),
         drawer: constraints.maxWidth < 800 ? Drawer() : null,
