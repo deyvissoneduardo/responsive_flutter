@@ -15,11 +15,13 @@ class CourseItem extends StatelessWidget {
         const SizedBox(
           height: 4,
         ),
-        Text(
-          'Criação de apps Andrios IOS com Flutter - Crie Varios Apps',
-          style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 15, color: Colors.white),
-        ),
+        Flexible(child: LayoutBuilder(builder: (context, constraints) {
+          return Text(
+            'Criação de Apps Andriod e IOS com Flutter - Crie varios apps',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 15, color: Colors.white),
+          );
+        })),
         Text(
           'Deyvisson Eduardo',
           style: TextStyle(color: Colors.white),
