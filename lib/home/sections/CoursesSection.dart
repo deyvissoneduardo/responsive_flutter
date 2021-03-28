@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive/widgets/CourseItem.dart';
 
 class CoursesSection extends StatelessWidget {
   const CoursesSection({Key key}) : super(key: key);
@@ -19,7 +20,7 @@ class CoursesSection extends StatelessWidget {
           shrinkWrap: true,
           itemCount: 20,
           itemBuilder: (context, index) {
-            return Container(color: Colors.red);
+            return CourseItem();
           },
         );
       },
